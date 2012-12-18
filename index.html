@@ -47,14 +47,15 @@
 					<h2>What is dependencies management?</h2>
 					<p>
 						Third party code/libraries that we use in our frameworks are considered as dependencies. Those third party libraries might have some other dependencies. Managing these dependencies are called dependency management. Example of such dependencies managemnt: 
-
-						Perl has CPAN,  
-						PHP has PEAR and PECL,  
-						Python has setuptools/distribute and PyPI,  
-						Ruby has RubyGems,
-						Node.js has npm,  
-						Go has goinstall,  
-						Haskell has Cabal and many more. 	
+						<ul>
+							<li>Perl has CPAN </li> 
+							<li>PHP has PEAR and PECL</li>  
+							<li>Python has setuptools/distribute and PyPI</li>  
+							<li>Ruby has RubyGems</li>
+							<li>Node.js has npm</li>
+							<li>Go has goinstall</li>  
+							<li>Haskell has Cabal and many more</li> 
+						</ul>	
 					</p>
 
 					<aside class="notes">
@@ -73,44 +74,45 @@
 				</section>
 
 				<section>
-					<h2>How do I start?</h2>
+					
 					<section>
+						<h2>How do I start?</h2>
 						
 						<p>
 							Create a file called composer.js in your root with following content.
 
 							<pre><code contenteditable>
-								{
-								    "require": {
-								        "slim/slim": "2.2.0",
-								        "facebook/php-sdk": "dev-master"
-								    }
-								}
+{
+    "require": {
+        "slim/slim": "2.2.0",
+        "facebook/php-sdk": "dev-master"
+    }
+}
 							</code>
 							</pre> 
 
 						
 						</p>
 
-						<aside class="notes">
+						<p>
 							We assumed you need slim framework and facebook's php sdk!
-						</aside>
+						</p>
 					</section>
 
 					<section>
 						Get composer in your root folder:
 						<pre><code contenteditable>
-							curl -s https://getcomposer.org/installer | php
+curl -s https://getcomposer.org/installer | php
 						</code></pre>
 
 						Install dependencies:
 						<pre><code contenteditable>
-							php composer.phar install
+php composer.phar install
 						</code></pre>
 
 						Autoload the dependencies:
 						<pre><code contenteditable>
-							require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 						</code>
 						</pre>
 
@@ -125,7 +127,7 @@
 
 					<pre>
 						<code contenteditable>
-							php composer.phar update
+php composer.phar update
 						</code>
 					</pre>
 				</section>
